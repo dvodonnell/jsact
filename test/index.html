@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Act</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+
+<script src="../src/act.js"></script>
+
+<script>
+
+    var Div = Act.DOM('div'),
+        P = Act.DOM('p');
+
+    var MyElement = Act.defineElement({
+        render : function(attrs, children) {
+
+
+            var kids = [];
+
+            for (var j = 0; j < attrs.cnt; j++) {
+                kids.push(P({}, j));
+            }
+
+            return Div({
+                className : 'abc'
+            }, [
+                Div({}, kids)
+            ]);
+
+        }
+    });
+
+    var lala = 1;
+
+    setInterval(function(){
+        Act.render(MyElement({
+            cnt : lala
+        }), document.getElementById('container'));
+        lala++;
+    }, 1000);
+
+
+</script>
+
+</body>
+</html>
