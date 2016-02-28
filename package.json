@@ -1,0 +1,19 @@
+{
+  "name": "jsact",
+  "version": "1.0.0",
+  "description": "Old School New School JS",
+  "main": "src/act.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://dvodonnell@github.com/dvodonnell/jsact.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvodonnell/jsact/issues"
+  },
+  "homepage": "https://github.com/dvodonnell/jsact#readme"
+}
