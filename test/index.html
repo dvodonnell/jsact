@@ -25,7 +25,6 @@
     var MyElement = Act.defineElement({
         render : function(attrs, children) {
 
-
             var kids = [];
 
             for (var j = 0; j < attrs.cnt; j++) {
@@ -44,9 +43,15 @@
     var lala = 1;
 
     setInterval(function(){
+
         Act.render(MyElement({
             cnt : lala
-        }), document.getElementById('container'));
+        }, [
+                MyElement({
+                    cnt : lala
+                })
+        ]), document.getElementById('container'));
+
         lala++;
     }, 1000);
 
